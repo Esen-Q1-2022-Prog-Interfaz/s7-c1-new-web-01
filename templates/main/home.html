@@ -1,0 +1,9 @@
+{% extends './base.html' %}
+
+{% block title %}home page{% endblock %}
+
+{% block contents %}
+<h1>site home page</h1>
+<br>
+<a href="{{url_for('site.about')}}">about</a>
+{% endblock %}
