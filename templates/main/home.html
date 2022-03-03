@@ -5,5 +5,26 @@
 {% block contents %}
 <h1>site home page</h1>
 <br>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>fullname</th>
+            <th>email</th>
+            <th>phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.id }}</td>
+            <td>{{ contact.fullname }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.phone }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<br>
 <a href="{{url_for('site.about')}}">about</a>
 {% endblock %}
