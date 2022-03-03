@@ -9,5 +9,5 @@ def main():
 
 
 @dashboard.route("/dashboard")
-def dashboard():
+def mainDashboard():
     return render_template("admin/dashboard.html")
