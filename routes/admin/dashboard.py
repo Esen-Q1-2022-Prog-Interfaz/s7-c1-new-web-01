@@ -1,13 +1,13 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 dashboard = Blueprint("dashboard", __name__, url_prefix="/admin")
 
 
 @dashboard.route("/")
 def main():
-    return "admin main pagez"
+    return render_template("admin/login.html")
 
 
-@dashboard.route("/product")
-def product():
-    return "admin product pagez"
+@dashboard.route("/dashboard")
+def dashboard():
+    return render_template("admin/dashboard.html")
